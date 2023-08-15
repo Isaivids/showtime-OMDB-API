@@ -14,7 +14,7 @@ const SeriesList = () => {
         {data &&
           data.length > 0 &&
           data.map((x: any, index: any) => (
-            <div key={index}>
+            <div className="link-div" key={index}>
               {x.Poster === "N/A" ? (
                 <img src={DummyImage} alt="poster" />
               ) : (

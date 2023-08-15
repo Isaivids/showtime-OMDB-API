@@ -3,6 +3,7 @@ import "../home/Home.scss";
 import "../../common/Common.scss";
 import DummyImage from "../../assets/images/dummyImage.png";
 import Shimmer from "../../common/Shimmer";
+import { Link } from "react-router-dom";
 const MovieList = () => {
   const allMovies = useSelector((state: any) => state.movies);
   const data = allMovies.movieList.Search;
@@ -12,7 +13,7 @@ const MovieList = () => {
         {data &&
           data.length > 0 &&
           data.map((x: any, index: any) => (
-            <div key={index}>
+            <Link className="link-div" to={`/detail/${x.imdbID}`} key={index}>
               {x.Poster === "N/A" ? (
                 <img src={DummyImage} alt="poster" />
               ) : (
@@ -20,7 +21,7 @@ const MovieList = () => {
               )}
               <div className="overlay"></div>
               <span>{x.Title}</span>
-            </div>
+            </Link>
           ))}
       </div>
     );

@@ -17,7 +17,7 @@
   padding: 0.4em;
 }
 
-.card div {
+.card .link-div {
   height: 100%;
   flex: 1;
   overflow: hidden;
@@ -56,10 +56,10 @@
   }
 }
 
-.card div:hover {
+.card .link-div:hover {
   flex: 3;
 }
 
-.card div:hover span {
+.card .link-div:hover span {
   transform: rotate(0);
 }
