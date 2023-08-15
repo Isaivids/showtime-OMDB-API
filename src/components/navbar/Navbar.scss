@@ -1,0 +1,29 @@
+@import '../../common/Common.scss';
+
+.nav{
+    padding: 20px 0px;
+    .logo{
+        span{
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: $logo-primary;
+            letter-spacing: 2px;
+        }
+        img{
+            width: 32px;
+            height: 32px;
+        } 
+    }
+    
+    .navlinks{
+        gap: 30px;
+        font-weight: 500;
+        .active{
+            color: $menu-primary
+        }
+        .inactive{
+            color: $menu-hover
+        }
+    }
+}
+

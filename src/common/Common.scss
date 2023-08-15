@@ -1,0 +1,65 @@
+$logo-primary: #8990a9;
+$menu-primary: #272b55;
+$menu-hover: #9a9db0;
+$welcome: #262a4f;
+$welcome-secondary: #1f2b85;
+$greenish-tint: #5aded1;
+
+.flex-c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-a {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.flex-b {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gap-1 {
+  gap: 10px;
+}
+
+.gap-2 {
+  gap: 10px;
+}
+
+//shimmer
+.loader {
+  width: 100%;
+  height: 254px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  .shimmer {
+    width: 25%;
+    background: #e2e3e4;
+    background-image: linear-gradient(
+      to right,
+      #e2e3e4 0%,
+      #ececec 20%,
+      #e2e3e4 40%,
+      #e2e3e4 100%
+    );
+    animation: shim infinite 2s linear;
+  }
+  .shimmer_small_para {
+    height: 100%;
+  }
+  @keyframes shim {
+    0% {
+      background-position: -25vw 0;
+    }
+    100% {
+      background-position: 25vw 0;
+    }
+  }
+}

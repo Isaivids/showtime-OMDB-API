@@ -1,0 +1,65 @@
+@import '../../common/Common.scss';
+//movieList
+.header{
+  font-size: larger;
+  color: $welcome-secondary;
+  font-weight: 700;
+  padding: 5px;
+}
+.btns{
+  padding: 5px;
+}
+.card {
+  width: 100%;
+  height: 254px;
+  display: flex;
+  gap: 5px;
+  padding: 0.4em;
+}
+
+.card div {
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  object-fit: contain;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .overlay {
+    position: absolute;
+    background-color: #00000084;
+    z-index: 1 !important;
+    width: 100%;
+    height: 100%;
+  }
+  span {
+    position: absolute;
+    min-width: 14em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-90deg);
+    transition: all 0.5s;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    z-index: 2 !important;
+  }
+}
+
+.card div:hover {
+  flex: 3;
+}
+
+.card div:hover span {
+  transform: rotate(0);
+}
